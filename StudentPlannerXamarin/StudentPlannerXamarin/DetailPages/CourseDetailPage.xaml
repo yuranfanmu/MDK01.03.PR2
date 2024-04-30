@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StudentPlannerXamarin.CourseDetailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="DeleteCourseBtn" Text="Delete" Clicked="DeleteCourseBtn_Clicked" Order="Primary"/>
+        <ToolbarItem x:Name="EditCourseBtn" Text="Edit" Clicked="EditCourseBtn_Clicked" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="StartDateLabel" />
+                <Label x:Name="EndDateLabel" />
+                <Label x:Name="StatusLabel" />
+                <Label x:Name="InstructorNameLabel" />
+                <Label x:Name="InstructorPhoneLabel" />
+                <Label x:Name="InstructorEmailLabel" />
+                <Label x:Name="NotesLabel" />
+
+                <Label HorizontalTextAlignment="Center" Text="Assessments"/>
+                
+                <Button x:Name="AddAssessmentBtn" Text="Add Assessment" Clicked="AddAssessmentBtn_Clicked"/>
+                <ListView x:Name="AssessmentListView" 
+			      ItemTapped="AssessmentListView_ItemTapped"
+			      ItemsSource="{Binding .}" />
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

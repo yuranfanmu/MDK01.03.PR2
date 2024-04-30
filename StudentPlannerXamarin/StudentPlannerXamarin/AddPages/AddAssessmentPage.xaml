@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StudentPlannerXamarin.AddAssessmentPage"
+             Title="Add Assessment">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Assessment Name" />
+                <Entry x:Name="AssessmentName" />
+
+                <Label Text="Due Date" />
+                <DatePicker x:Name="DueDatePicker"/>
+
+                <Picker x:Name="AssessmentTypePicker" Title="Type"/>
+
+                <Label Text="Description"/>
+                <Entry x:Name="Description" />
+
+                <Button x:Name="AddAssessment"
+                    Text="Add Assessment"
+                    Clicked="AddAssessment_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
